@@ -5,7 +5,7 @@
     <semanticResources>petriNet.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_vpxHwOZfEfCf27zW1gnYiQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_vqBmcOZfEfCf27zW1gnYiQ" name="petriNet" repPath="#_vp_KMOZfEfCf27zW1gnYiQ" changeId="1767201868470">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_vqBmcOZfEfCf27zW1gnYiQ" name="petriNet" repPath="#_vp_KMOZfEfCf27zW1gnYiQ" changeId="1767357942850">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="petriNet.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -113,22 +113,6 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_l-e4yuZgEfCf27zW1gnYiQ" id="(0.0,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_l-e4y-ZgEfCf27zW1gnYiQ" id="(0.39097744360902253,1.0)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_9LtNXOZgEfCf27zW1gnYiQ" type="4001" element="_9LqxFuZgEfCf27zW1gnYiQ" source="_BdV3EOZgEfCf27zW1gnYiQ" target="_3t0dwOZfEfCf27zW1gnYiQ">
-          <children xmi:type="notation:Node" xmi:id="_9Lt0YOZgEfCf27zW1gnYiQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9Lt0YeZgEfCf27zW1gnYiQ" x="22" y="-10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_9Lt0YuZgEfCf27zW1gnYiQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9Lt0Y-ZgEfCf27zW1gnYiQ" x="7" y="10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_9Lt0ZOZgEfCf27zW1gnYiQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9Lt0ZeZgEfCf27zW1gnYiQ" y="10"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_9LtNXeZgEfCf27zW1gnYiQ" routing="Rectilinear"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_9LtNXuZgEfCf27zW1gnYiQ" fontColor="7490599" fontName=".AppleSystemUIFont" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9LtNX-ZgEfCf27zW1gnYiQ" points="[4, 0, 0, 66]$[4, -66, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9Lt0ZuZgEfCf27zW1gnYiQ" id="(0.5,0.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9Lt0Z-ZgEfCf27zW1gnYiQ" id="(0.5,1.0)"/>
-        </edges>
         <edges xmi:type="notation:Edge" xmi:id="_VqP-0OZsEfCoys71ImSv5g" type="4001" element="_VqJ4MOZsEfCoys71ImSv5g" source="_APZdQeZgEfCf27zW1gnYiQ" target="_3t0dwOZfEfCf27zW1gnYiQ">
           <children xmi:type="notation:Node" xmi:id="_VqQl4OZsEfCoys71ImSv5g" type="6001">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VqQl4eZsEfCoys71ImSv5g" x="4" y="-10"/>
@@ -225,6 +209,22 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Qy9qVuZtEfCoys71ImSv5g" id="(0.0,0.1326530612244898)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Qy9qV-ZtEfCoys71ImSv5g" id="(0.21052631578947367,0.0)"/>
         </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_7nh38OfYEfCRpfAQZr7DSg" type="4001" element="_7nSAVufYEfCRpfAQZr7DSg" source="_BdV3EOZgEfCf27zW1gnYiQ" target="_3t0dwOZfEfCf27zW1gnYiQ">
+          <children xmi:type="notation:Node" xmi:id="_7nliUOfYEfCRpfAQZr7DSg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7nliUefYEfCRpfAQZr7DSg" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_7nliUufYEfCRpfAQZr7DSg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7nliU-fYEfCRpfAQZr7DSg" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_7nmJYOfYEfCRpfAQZr7DSg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7nmJYefYEfCRpfAQZr7DSg" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_7nh38efYEfCRpfAQZr7DSg" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_7nh38ufYEfCRpfAQZr7DSg" fontColor="7490599" fontName=".AppleSystemUIFont" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_7nh38-fYEfCRpfAQZr7DSg" points="[-15, 0, -15, 66]$[-15, -66, -15, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_7nmwcOfYEfCRpfAQZr7DSg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_7nnXgOfYEfCRpfAQZr7DSg" id="(0.4661016949152542,1.0)"/>
+        </edges>
       </data>
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_vqLXcOZfEfCf27zW1gnYiQ" source="DANNOTATION_CUSTOMIZATION_KEY">
@@ -250,7 +250,7 @@
         </computedStyleDescriptions>
       </data>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_3txacOZfEfCf27zW1gnYiQ" name="Noeud" tooltipText="" outgoingEdges="_Lpcy4uZtEfCoys71ImSv5g _Qy3jvOZtEfCoys71ImSv5g" incomingEdges="_9LqxFuZgEfCf27zW1gnYiQ _VqJ4MOZsEfCoys71ImSv5g _WHZ05uZsEfCoys71ImSv5g _snnSfOZsEfCoys71ImSv5g _09NEbOZsEfCoys71ImSv5g" width="12" height="10">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_3txacOZfEfCf27zW1gnYiQ" name="Noeud" tooltipText="" outgoingEdges="_Lpcy4uZtEfCoys71ImSv5g _Qy3jvOZtEfCoys71ImSv5g" incomingEdges="_VqJ4MOZsEfCoys71ImSv5g _WHZ05uZsEfCoys71ImSv5g _snnSfOZsEfCoys71ImSv5g _09NEbOZsEfCoys71ImSv5g _7nSAVufYEfCRpfAQZr7DSg" width="12" height="10">
       <target xmi:type="ecore:EClass" href="petriNet.ecore#//Noeud"/>
       <semanticElements xmi:type="ecore:EClass" href="petriNet.ecore#//Noeud"/>
       <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_AjdMQeZhEfCf27zW1gnYiQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
@@ -314,7 +314,7 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_BdUB4OZgEfCf27zW1gnYiQ" name="PetriNet" tooltipText="" outgoingEdges="_l-b1cOZgEfCf27zW1gnYiQ _9LqxFuZgEfCf27zW1gnYiQ" width="12" height="10">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_BdUB4OZgEfCf27zW1gnYiQ" name="PetriNet" tooltipText="" outgoingEdges="_l-b1cOZgEfCf27zW1gnYiQ _7nSAVufYEfCRpfAQZr7DSg" width="12" height="10">
       <target xmi:type="ecore:EClass" href="petriNet.ecore#//PetriNet"/>
       <semanticElements xmi:type="ecore:EClass" href="petriNet.ecore#//PetriNet"/>
       <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qVbD2eZgEfCf27zW1gnYiQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
@@ -360,18 +360,6 @@
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_l-ccg-ZgEfCf27zW1gnYiQ" description="_l-ccgOZgEfCf27zW1gnYiQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_l-ccheZgEfCf27zW1gnYiQ" showIcon="false"/>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_l-cchOZgEfCf27zW1gnYiQ" showIcon="false" labelColor="39,76,114">
-          <customFeatures>labelSize</customFeatures>
-        </endLabelStyle>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_9LqxFuZgEfCf27zW1gnYiQ" name="[0..*] noeud" sourceNode="_BdUB4OZgEfCf27zW1gnYiQ" targetNode="_3txacOZfEfCf27zW1gnYiQ">
-      <target xmi:type="ecore:EReference" href="petriNet.ecore#//PetriNet/noeud"/>
-      <semanticElements xmi:type="ecore:EReference" href="petriNet.ecore#//PetriNet/noeud"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_9LqxF-ZgEfCf27zW1gnYiQ" routingStyle="manhattan" strokeColor="0,0,0">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_9LqxGeZgEfCf27zW1gnYiQ" showIcon="false"/>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_9LqxGOZgEfCf27zW1gnYiQ" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>
         </endLabelStyle>
       </ownedStyle>
@@ -442,6 +430,17 @@
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_Qy3jv-ZtEfCoys71ImSv5g" showIcon="false"/>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_Qy3jvuZtEfCoys71ImSv5g" showIcon="false" labelColor="39,76,114">
+          <customFeatures>labelSize</customFeatures>
+        </endLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_7nSAVufYEfCRpfAQZr7DSg" name="[0..*] noeud" sourceNode="_BdUB4OZgEfCf27zW1gnYiQ" targetNode="_3txacOZfEfCf27zW1gnYiQ">
+      <target xmi:type="ecore:EReference" href="petriNet.ecore#//PetriNet/noeud"/>
+      <semanticElements xmi:type="ecore:EReference" href="petriNet.ecore#//PetriNet/noeud"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_7nSnYOfYEfCRpfAQZr7DSg" description="_l-ccgOZgEfCf27zW1gnYiQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_7nSnYufYEfCRpfAQZr7DSg" showIcon="false"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_7nSnYefYEfCRpfAQZr7DSg" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>
         </endLabelStyle>
       </ownedStyle>
