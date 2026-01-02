@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simplePDL:Process
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:simplePDL="http://www.example.org/simplePDL"
+    xsi:schemaLocation="http://www.example.org/simplePDL simplePDL.ecore"
+    name="name">
+  <worksequence
+      predecessor="//@workdefinition.0"
+      successor="//@workdefinition.0"/>
+  <resource
+      name="1hello"/>
+  <resource
+      name="1hello"/>
+  <resource
+      name="test"
+      occuranceNo="1"/>
+  <resource
+      name="test"
+      occuranceNo="1"/>
+  <workdefinition
+      name="1hello"
+      linksToSuccessors="//@worksequence.0"
+      linksToPredecessors="//@worksequence.0">
+    <parameter/>
+  </workdefinition>
+  <workdefinition
+      name="1hello"/>
+</simplePDL:Process>

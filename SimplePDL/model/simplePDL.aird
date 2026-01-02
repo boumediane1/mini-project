@@ -3,9 +3,10 @@
   <viewpoint:DAnalysis uid="_CQpSYOZXEfCf27zW1gnYiQ" selectedViews="_CRiDMOZXEfCf27zW1gnYiQ" version="15.4.1.202403191723">
     <semanticResources>simplePDL.ecore</semanticResources>
     <semanticResources>simplePDL.genmodel</semanticResources>
+    <semanticResources>Process.xmi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_CRiDMOZXEfCf27zW1gnYiQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_CS4HAOZXEfCf27zW1gnYiQ" name="simplePDL" repPath="#_CR-IEOZXEfCf27zW1gnYiQ" changeId="1767195660974">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_CS4HAOZXEfCf27zW1gnYiQ" name="simplePDL" repPath="#_CR-IEOZXEfCf27zW1gnYiQ" changeId="1767210639655">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="simplePDL.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -331,6 +332,12 @@
             <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
           </endLabelStyleDescription>
         </computedStyleDescriptions>
+        <computedStyleDescriptions xmi:type="style:BundledImageDescription" xmi:id="_-7DoEOaBEfC5s5LvWrFlMw" labelExpression="service:render" labelAlignment="LEFT" tooltipExpression="service:renderTooltip" sizeComputationExpression="1">
+          <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <labelFormat>bold</labelFormat>
+          <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <color xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </computedStyleDescriptions>
       </data>
     </ownedAnnotationEntries>
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_JFiGkOZXEfCf27zW1gnYiQ" name="Parameter" tooltipText="" outgoingEdges="_uOkxnOZeEfCf27zW1gnYiQ" incomingEdges="_j9wpIuZeEfCf27zW1gnYiQ" width="12" height="10">
@@ -343,8 +350,8 @@
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_NC-MgOZXEfCf27zW1gnYiQ" name="quantity : EInt" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="simplePDL.ecore#//Parameter/quantity"/>
         <semanticElements xmi:type="ecore:EAttribute" href="simplePDL.ecore#//Parameter/quantity"/>
-        <ownedStyle xmi:type="diagram:BundledImage" uid="_4j6R4uZXEfCf27zW1gnYiQ" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_-7DoEuaBEfC5s5LvWrFlMw" labelAlignment="LEFT" description="_-7DoEOaBEfC5s5LvWrFlMw">
+          <labelFormat>bold</labelFormat>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
@@ -407,8 +414,8 @@
       <ownedElements xmi:type="diagram:DNodeListElement" uid="__BA4MOZXEfCf27zW1gnYiQ" name="occuranceNo : EInt" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="simplePDL.ecore#//Resource/occuranceNo"/>
         <semanticElements xmi:type="ecore:EAttribute" href="simplePDL.ecore#//Resource/occuranceNo"/>
-        <ownedStyle xmi:type="diagram:BundledImage" uid="_CAN0ROZYEfCf27zW1gnYiQ" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_-7E2MuaBEfC5s5LvWrFlMw" labelAlignment="LEFT" description="_-7DoEOaBEfC5s5LvWrFlMw">
+          <labelFormat>bold</labelFormat>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
