@@ -5,7 +5,7 @@
     <semanticResources>petriNet.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_vpxHwOZfEfCf27zW1gnYiQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_vqBmcOZfEfCf27zW1gnYiQ" name="petriNet" repPath="#_vp_KMOZfEfCf27zW1gnYiQ" changeId="1767357942850">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_vqBmcOZfEfCf27zW1gnYiQ" name="petriNet" repPath="#_vp_KMOZfEfCf27zW1gnYiQ" changeId="1767358637122">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="petriNet.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -253,8 +253,9 @@
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_3txacOZfEfCf27zW1gnYiQ" name="Noeud" tooltipText="" outgoingEdges="_Lpcy4uZtEfCoys71ImSv5g _Qy3jvOZtEfCoys71ImSv5g" incomingEdges="_VqJ4MOZsEfCoys71ImSv5g _WHZ05uZsEfCoys71ImSv5g _snnSfOZsEfCoys71ImSv5g _09NEbOZsEfCoys71ImSv5g _7nSAVufYEfCRpfAQZr7DSg" width="12" height="10">
       <target xmi:type="ecore:EClass" href="petriNet.ecore#//Noeud"/>
       <semanticElements xmi:type="ecore:EClass" href="petriNet.ecore#//Noeud"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_AjdMQeZhEfCf27zW1gnYiQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_kQ-WUefaEfCRpfAQZr7DSg" iconPath="/org.eclipse.emf.ecoretools.design/icons/full/obj16/EClass_abstract.gif" borderSize="1" borderSizeComputationExpression="1" borderColor="125,125,125" backgroundStyle="Liquid" foregroundColor="228,228,228">
+        <labelFormat>italic</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@conditionnalStyles.1/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="__dEL8OZgEfCf27zW1gnYiQ" name="name : EString" tooltipText="">
