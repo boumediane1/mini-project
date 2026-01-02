@@ -13,6 +13,13 @@ Require-Bundle: org.xtext.simplepdl,
  org.eclipse.xtext.ui.shared,
  org.eclipse.xtext.ui.codetemplates.ui,
  org.eclipse.ui.editors;bundle-version="3.14.300",
- org.eclipse.ui.ide;bundle-version="3.18.500"
+ org.eclipse.ui.ide;bundle-version="3.18.500",
+ org.eclipse.ui,
+ org.eclipse.compare,
+ org.eclipse.xtext.builder
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-21
+Export-Package: org.xtext.simplepdl.ui.contentassist,
+ org.xtext.simplepdl.ui.internal,
+ org.xtext.simplepdl.ui.quickfix
+Bundle-Activator: org.xtext.simplepdl.ui.internal.SimplepdlActivator

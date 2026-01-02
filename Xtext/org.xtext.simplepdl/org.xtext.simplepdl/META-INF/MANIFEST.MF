@@ -9,5 +9,17 @@ Bundle-ActivationPolicy: lazy
 Require-Bundle: SimplePDL,
  org.eclipse.xtext,
  org.eclipse.xtext.xbase,
- org.eclipse.equinox.common;bundle-version="3.19.0"
+ org.eclipse.equinox.common;bundle-version="3.19.0",
+ org.eclipse.xtext.xbase.lib;bundle-version="2.41.0",
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
 Bundle-RequiredExecutionEnvironment: JavaSE-21
+Export-Package: org.xtext.simplepdl.parser.antlr.internal,
+ org.xtext.simplepdl.validation,
+ org.xtext.simplepdl.serializer,
+ org.xtext.simplepdl.parser.antlr,
+ org.xtext.simplepdl.scoping,
+ org.xtext.simplepdl,
+ org.xtext.simplepdl.services,
+ org.xtext.simplepdl.formatting2,
+ org.xtext.simplepdl.generator
+Import-Package: org.apache.log4j
