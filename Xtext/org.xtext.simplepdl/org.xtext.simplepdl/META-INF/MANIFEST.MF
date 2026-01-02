@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: org.xtext.simplepdl
+Bundle-ManifestVersion: 2
+Bundle-Name: org.xtext.simplepdl
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.xtext.simplepdl; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: SimplePDL,
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.19.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-21
