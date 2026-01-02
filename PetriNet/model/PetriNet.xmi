@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<petriNet:PetriNet
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:petriNet="http://www.example.org/petriNet"
+    xsi:schemaLocation="http://www.example.org/petriNet petriNet.ecore">
+  <arc source="//@noeud.1"
+      target="//@noeud.0"/>
+  <noeud xsi:type="petriNet:Transition"
+      name="t2"/>
+  <noeud xsi:type="petriNet:Transition"
+      name="t1"/>
+  <noeud xsi:type="petriNet:Transition"
+      name="hello"/>
+  <noeud xsi:type="petriNet:Place"
+      name="hello"/>
+  <noeud xsi:type="petriNet:Place"
+      jeton="-1"/>
+</petriNet:PetriNet>

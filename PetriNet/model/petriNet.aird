@@ -3,9 +3,10 @@
   <viewpoint:DAnalysis uid="_vpKDwOZfEfCf27zW1gnYiQ" selectedViews="_vpxHwOZfEfCf27zW1gnYiQ" version="15.4.1.202403191723">
     <semanticResources>petriNet.ecore</semanticResources>
     <semanticResources>petriNet.genmodel</semanticResources>
+    <semanticResources>PetriNet.xmi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_vpxHwOZfEfCf27zW1gnYiQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_vqBmcOZfEfCf27zW1gnYiQ" name="petriNet" repPath="#_vp_KMOZfEfCf27zW1gnYiQ" changeId="1767358637122">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_vqBmcOZfEfCf27zW1gnYiQ" name="petriNet" repPath="#_vp_KMOZfEfCf27zW1gnYiQ" changeId="1767358755161">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="petriNet.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -248,6 +249,12 @@
             <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
           </endLabelStyleDescription>
         </computedStyleDescriptions>
+        <computedStyleDescriptions xmi:type="style:BundledImageDescription" xmi:id="_12s24efaEfCRpfAQZr7DSg" labelExpression="service:render" labelAlignment="LEFT" tooltipExpression="service:renderTooltip" sizeComputationExpression="1">
+          <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <labelFormat>bold</labelFormat>
+          <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <color xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </computedStyleDescriptions>
       </data>
     </ownedAnnotationEntries>
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_3txacOZfEfCf27zW1gnYiQ" name="Noeud" tooltipText="" outgoingEdges="_Lpcy4uZtEfCoys71ImSv5g _Qy3jvOZtEfCoys71ImSv5g" incomingEdges="_VqJ4MOZsEfCoys71ImSv5g _WHZ05uZsEfCoys71ImSv5g _snnSfOZsEfCoys71ImSv5g _09NEbOZsEfCoys71ImSv5g _7nSAVufYEfCRpfAQZr7DSg" width="12" height="10">
@@ -277,8 +284,8 @@
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_sG62oOZgEfCf27zW1gnYiQ" name="poid : EInt" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="petriNet.ecore#//Arc/poid"/>
         <semanticElements xmi:type="ecore:EAttribute" href="petriNet.ecore#//Arc/poid"/>
-        <ownedStyle xmi:type="diagram:BundledImage" uid="_uplAo-ZgEfCf27zW1gnYiQ" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_12td8efaEfCRpfAQZr7DSg" labelAlignment="LEFT" description="_12s24efaEfCRpfAQZr7DSg">
+          <labelFormat>bold</labelFormat>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
@@ -309,8 +316,8 @@
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_EAWw8OZhEfCf27zW1gnYiQ" name="jeton : EInt" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="petriNet.ecore#//Place/jeton"/>
         <semanticElements xmi:type="ecore:EAttribute" href="petriNet.ecore#//Place/jeton"/>
-        <ownedStyle xmi:type="diagram:BundledImage" uid="_FfC8j-ZhEfCf27zW1gnYiQ" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_12uFAefaEfCRpfAQZr7DSg" labelAlignment="LEFT" description="_12s24efaEfCRpfAQZr7DSg">
+          <labelFormat>bold</labelFormat>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
