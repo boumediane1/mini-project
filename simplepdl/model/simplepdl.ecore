@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="simplepdl" nsURI="http://www.example.org/simplepdl" nsPrefix="simplepdl">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="PositiveQuantity"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="PositiveQuantity" value="self.quantity > 0"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantity" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" lowerBound="1"
+        eType="#//Resource"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="WorkSequenceType">
+    <eLiterals name="startToStart"/>
+    <eLiterals name="finishToStart" value="1"/>
+    <eLiterals name="startToFinish" value="2"/>
+    <eLiterals name="finishToFinish" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Resource">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="ValidName PositiveOccuranceNumber UniqueResourceNames"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="ValidName" value="self.name.matches('[A-Za-z_][A-Za-z0-9_]*')"/>
+      <details key="PositiveOccuranceNumber" value="&#xA;        &#x9;self.occuranceNo > 0"/>
+      <details key="UniqueResourceNames" value="Resource.allInstances()->isUnique(name)"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="occuranceNo" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WorkSequence">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="linkType" eType="#//WorkSequenceType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="predecessor" lowerBound="1"
+        eType="#//WorkDefinition" eOpposite="#//WorkDefinition/linksToSuccessors"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="successor" lowerBound="1"
+        eType="#//WorkDefinition" eOpposite="#//WorkDefinition/linksToPredecessors"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WorkDefinition">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="ValidName NoSelfDependency NameLengthGreaterThanOne UniqueActivityNames"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="ValidName" value="self.name.matches('[A-Za-z_][A-Za-z0-9_]*')"/>
+      <details key="NoSelfDependency" value="&#xA;&#x9;        self.linksToSuccessors->forAll(ws | ws.successor &lt;> self)&#xA;        &#x9;&#x9;and&#xA;&#x9;        self.linksToPredecessors->forAll(ws | ws.predecessor &lt;> self)"/>
+      <details key="NameLengthGreaterThanOne" value="self.name.size() > 1"/>
+      <details key="UniqueActivityNames" value="WorkDefinition.allInstances()->isUnique(name)"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" upperBound="-1"
+        eType="#//Parameter" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="guidance" upperBound="-1"
+        eType="#//Guidance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linksToSuccessors" upperBound="-1"
+        eType="#//WorkSequence" eOpposite="#//WorkSequence/predecessor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linksToPredecessors" upperBound="-1"
+        eType="#//WorkSequence" eOpposite="#//WorkSequence/successor"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Guidance">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Process">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="ValidName NoSameNameBetweenActivitiesAndResources"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="ValidName" value="self.name.matches('[A-Za-z_][A-Za-z0-9_]*')"/>
+      <details key="NoSameNameBetweenActivitiesAndResources" value="&#xA;&#x9;        self.workdefinition->forAll(w |&#xA;&#x9;            self.resource->forAll(r |&#xA;&#x9;                w.name &lt;> r.name&#xA;&#x9;            )&#xA;&#x9;        )"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="worksequence" upperBound="-1"
+        eType="#//WorkSequence" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="guidance" upperBound="-1"
+        eType="#//Guidance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" upperBound="-1"
+        eType="#//Resource" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="workdefinition" lowerBound="1"
+        upperBound="-1" eType="#//WorkDefinition" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>
