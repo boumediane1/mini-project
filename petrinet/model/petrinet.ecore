@@ -14,7 +14,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="ingoing" upperBound="-1"
         eType="#//Arc" eOpposite="#//Arc/target"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outgoing" upperBound="-1"
-        eType="#//Arc" eOpposite="#//Arc/noeud"/>
+        eType="#//Arc" eOpposite="#//Arc/source"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Arc">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -27,8 +27,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ArcType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
         eType="#//Noeud" eOpposite="#//Noeud/ingoing"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="noeud" lowerBound="1" eType="#//Noeud"
-        eOpposite="#//Noeud/outgoing"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//Noeud" eOpposite="#//Noeud/outgoing"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Transition" eSuperTypes="#//Noeud"/>
   <eClassifiers xsi:type="ecore:EClass" name="Place" eSuperTypes="#//Noeud">

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simplepdl:Process
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:simplepdl="http://www.example.org/simplepdl"
+    name="SoftwareProcess">
+
+  <!-- Work Definitions -->
+
+  <workdefinition
+      xmi:id="wd1"
+      name="Conception"
+      linksToSuccessors="//@worksequence.0 //@worksequence.1 //@worksequence.2 //@worksequence.3">
+
+    <parameter quantity="2" resource="//@resource.0"/>
+    <parameter quantity="2" resource="//@resource.1"/>
+  </workdefinition>
+
+  <workdefinition
+      xmi:id="wd2"
+      name="RedactionDoc"
+      linksToPredecessors="//@worksequence.0 //@worksequence.1"/>
+
+  <workdefinition
+      xmi:id="wd4"
+      name="RedactionTests"
+      linksToPredecessors="//@worksequence.2 //@worksequence.4"/>
+
+  <workdefinition
+      xmi:id="wd3"
+      name="Programmation"
+      linksToPredecessors="//@worksequence.3"
+      linksToSuccessors="//@worksequence.4"/>
+
+  <!-- Work Sequences (Relations) -->
+
+  <!-- Conception -> RedactionDoc (finishToFinish) -->
+  <worksequence
+      xmi:id="ws1"
+      linkType="finishToFinish"
+      predecessor="//@workdefinition.0"
+      successor="//@workdefinition.1"/>
+
+  <!-- Conception -> RedactionDoc (startToStart) -->
+  <worksequence
+      xmi:id="ws2"
+      linkType="startToStart"
+      predecessor="//@workdefinition.0"
+      successor="//@workdefinition.1"/>
+
+  <!-- Conception -> RedactionTests (startToStart) -->
+  <worksequence
+      xmi:id="ws3"
+      linkType="startToStart"
+      predecessor="//@workdefinition.0"
+      successor="//@workdefinition.2"/>
+
+  <!-- Conception -> Programmation (finishToStart) -->
+  <worksequence
+      xmi:id="ws4"
+      linkType="finishToStart"
+      predecessor="//@workdefinition.0"
+      successor="//@workdefinition.3"/>
+
+  <!-- Programmation -> RedactionTests (finishToFinish) -->
+  <worksequence
+      xmi:id="ws5"
+      linkType="finishToFinish"
+      predecessor="//@workdefinition.3"
+      successor="//@workdefinition.2"/>
+
+  <!-- Guidance -->
+  <guidance description="Guidances"/>
+
+  <!-- Resources -->
+
+  <resource
+      name="Concepteur"
+      occuranceNo="3"/>
+
+  <resource
+      name="Machine"
+      occuranceNo="4"/>
+
+</simplepdl:Process>

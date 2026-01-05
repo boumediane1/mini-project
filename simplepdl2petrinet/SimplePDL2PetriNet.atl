@@ -1,0 +1,175 @@
+-- @path petriNet=/petrinet/model/petrinet.ecore
+-- @path simplepdl=/simplepdl/model/simplepdl.ecore
+
+module SimplePDL2PetriNet;
+create OUT : petriNet from IN : simplepdl;
+
+--------------------------------------------------
+-- Helpers
+--------------------------------------------------
+
+helper context simplepdl!Process def : noeudOfPetriNet() : Sequence(petriNet!Noeud) =
+    petriNet!Noeud.allInstances()->asSequence();
+
+helper context simplepdl!Process def : arcOfPetriNet() : Sequence(petriNet!Arc) =
+    petriNet!Arc.allInstances()->asSequence();
+
+helper context simplepdl!Parameter def : workdefinitionOfParameter() : simplepdl!WorkDefinition =
+    simplepdl!WorkDefinition.allInstances()
+        ->select(w | w.parameter->includes(self))
+        ->first();
+
+--------------------------------------------------
+-- Process → PetriNet
+--------------------------------------------------
+
+rule Process2PetriNet {
+    from p : simplepdl!Process
+    to pn : petriNet!PetriNet (
+        name  <- p.name,
+        noeud <- p.noeudOfPetriNet(),
+        arc   <- p.arcOfPetriNet()
+    )
+}
+
+--------------------------------------------------
+-- WorkDefinition → PetriNet pattern
+--------------------------------------------------
+
+rule WorkDefinition2PetriNet {
+    from wd : simplepdl!WorkDefinition
+    to
+        -- Places
+        p_notStarted : petriNet!Place (
+            name  <- wd.name + '_notStarted',
+            jeton <- 1
+        ),
+
+        p_inProgress : petriNet!Place (
+            name  <- wd.name + '_inProgress',
+            jeton <- 0
+        ),
+
+        p_started : petriNet!Place (
+            name  <- wd.name + '_started',
+            jeton <- 0
+        ),
+
+        p_finished : petriNet!Place (
+            name  <- wd.name + '_finished',
+            jeton <- 0
+        ),
+
+        -- Transitions
+        t_start : petriNet!Transition (
+            name <- wd.name + '_start'
+        ),
+
+        t_finish : petriNet!Transition (
+            name <- wd.name + '_finish'
+        ),
+
+        -- Arcs
+        a1 : petriNet!Arc (
+            type   <- #SIMPLE,
+            poid   <- 1,
+            source <- p_notStarted,
+            target <- t_start
+        ),
+
+        a21 : petriNet!Arc (
+            type   <- #SIMPLE,
+            poid   <- 1,
+            source <- t_start,
+            target <- p_inProgress
+        ),
+
+        a22 : petriNet!Arc (
+            type   <- #SIMPLE,
+            poid   <- 1,
+            source <- t_start,
+            target <- p_started
+        ),
+
+        a3 : petriNet!Arc (
+            type   <- #SIMPLE,
+            poid   <- 1,
+            source <- p_inProgress,
+            target <- t_finish
+        ),
+
+        a4 : petriNet!Arc (
+            type   <- #SIMPLE,
+            poid   <- 1,
+            source <- t_finish,
+            target <- p_finished
+        )
+}
+
+--------------------------------------------------
+-- WorkSequence → Read Arc
+--------------------------------------------------
+
+rule WorkSequence2PetriNet {
+    from ws : simplepdl!WorkSequence
+    to a_ws : petriNet!Arc (
+        type <- #READ_ARC,
+        poid <- 1,
+
+        source <- thisModule.resolveTemp(
+            ws.predecessor,
+            if ws.linkType = #finishToFinish or ws.linkType = #finishToStart
+            then 'p_finished'
+            else 'p_started'
+            endif
+        ),
+
+        target <- thisModule.resolveTemp(
+            ws.successor,
+            if ws.linkType = #finishToStart or ws.linkType = #startToStart
+            then 't_start'
+            else 't_finish'
+            endif
+        )
+    )
+}
+
+--------------------------------------------------
+-- Resource → Place
+--------------------------------------------------
+
+rule Resource2PetriNet {
+    from res : simplepdl!Resource
+    to p_res : petriNet!Place (
+        name  <- res.name,
+        jeton <- res.occuranceNo
+    )
+}
+
+--------------------------------------------------
+-- Parameter → Resource usage arcs
+--------------------------------------------------
+
+rule Parameter2PetriNet {
+    from par : simplepdl!Parameter
+    to
+        arc_request : petriNet!Arc (
+            type   <- #SIMPLE,
+            poid   <- par.quantity,
+            source <- par.resource,
+            target <- thisModule.resolveTemp(
+                par.workdefinitionOfParameter(),
+                't_start'
+            )
+        ),
+
+        arc_release : petriNet!Arc (
+            type   <- #SIMPLE,
+            poid   <- par.quantity,
+            source <- thisModule.resolveTemp(
+                par.workdefinitionOfParameter(),
+                't_finish'
+            ),
+            target <- par.resource
+        )
+}

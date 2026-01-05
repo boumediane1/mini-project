@@ -5,7 +5,7 @@
     <semanticResources>petrinet.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_ewxQMOoWEfCgM7t1lDsR0g">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_exBH0OoWEfCgM7t1lDsR0g" name="petrinet" repPath="#_ew-rkOoWEfCgM7t1lDsR0g" changeId="1767610735832">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_exBH0OoWEfCgM7t1lDsR0g" name="petrinet" repPath="#_ew-rkOoWEfCgM7t1lDsR0g" changeId="1767615458744">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="petrinet.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -231,7 +231,7 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_hlWvUeokEfCgM7t1lDsR0g" name="Arc" tooltipText="&#xA;WARNING : The «invariant» 'petrinet::Arc' is invalid: '&quot;(self.source.oclIsKindOf(Place) and self.target.oclIsKindOf(Transition))\n\t\t    \tor\n\t\t    (self.source.oclIsKindOf(Transition) and self.target.oclIsKindOf(Place))&quot;&#xA;&#x9;The 'CallExp::TypeIsNotInvalid' constraint is violated for 'self.oclBadProperty'&#xA;&#x9;The 'PropertyCallExp::CompatibleResultType' constraint is violated for 'self.oclBadProperty'&#xA;&#x9;The 'PropertyCallExp::NonStaticSourceTypeIsConformant' constraint is violated for 'self.oclBadProperty'&#xA;&#x9;The 'CallExp::TypeIsNotInvalid' constraint is violated for 'self.oclBadProperty'&#xA;&#x9;The 'PropertyCallExp::CompatibleResultType' constraint is violated for 'self.oclBadProperty'&#xA;&#x9;The 'PropertyCallExp::NonStaticSourceTypeIsConformant' constraint is violated for 'self.oclBadProperty''&#xA;WARNING : The 'CallExp::TypeIsNotInvalid' constraint is violated for 'self.oclBadProperty'&#xA;WARNING : The 'PropertyCallExp::CompatibleResultType' constraint is violated for 'self.oclBadProperty'&#xA;WARNING : The 'PropertyCallExp::NonStaticSourceTypeIsConformant' constraint is violated for 'self.oclBadProperty'&#xA;WARNING : The 'CallExp::TypeIsNotInvalid' constraint is violated for 'self.oclBadProperty'&#xA;WARNING : The 'PropertyCallExp::CompatibleResultType' constraint is violated for 'self.oclBadProperty'&#xA;WARNING : The 'PropertyCallExp::NonStaticSourceTypeIsConformant' constraint is violated for 'self.oclBadProperty'" incomingEdges="_hvwokOokEfCgM7t1lDsR0g _yt49kOokEfCgM7t1lDsR0g _MynqxuolEfCgM7t1lDsR0g" width="12" height="10">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_hlWvUeokEfCgM7t1lDsR0g" name="Arc" tooltipText="" incomingEdges="_hvwokOokEfCgM7t1lDsR0g _yt49kOokEfCgM7t1lDsR0g _MynqxuolEfCgM7t1lDsR0g" width="12" height="10">
       <target xmi:type="ecore:EClass" href="petrinet.ecore#//Arc"/>
       <semanticElements xmi:type="ecore:EClass" href="petrinet.ecore#//Arc"/>
       <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_huSB0OokEfCgM7t1lDsR0g" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
@@ -376,10 +376,10 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='Bi-directional%20EC_EReference%20']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_MynqxuolEfCgM7t1lDsR0g" sourceNode="_hlU6IOokEfCgM7t1lDsR0g" targetNode="_hlWvUeokEfCgM7t1lDsR0g" beginLabel="[1..1] noeud" endLabel="[0..*] outgoing">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_MynqxuolEfCgM7t1lDsR0g" sourceNode="_hlU6IOokEfCgM7t1lDsR0g" targetNode="_hlWvUeokEfCgM7t1lDsR0g" beginLabel="[1..1] source" endLabel="[0..*] outgoing">
       <target xmi:type="ecore:EReference" href="petrinet.ecore#//Noeud/outgoing"/>
-      <semanticElements xmi:type="ecore:EReference" href="petrinet.ecore#//Arc/noeud"/>
       <semanticElements xmi:type="ecore:EReference" href="petrinet.ecore#//Noeud/outgoing"/>
+      <semanticElements xmi:type="ecore:EReference" href="petrinet.ecore#//Arc/source"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Mynqx-olEfCgM7t1lDsR0g" sourceArrow="InputArrow" routingStyle="manhattan" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='Bi-directional%20EC_EReference%20']/@style"/>
         <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_MynqyOolEfCgM7t1lDsR0g" showIcon="false"/>

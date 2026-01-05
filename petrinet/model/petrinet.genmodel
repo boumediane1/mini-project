@@ -22,7 +22,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinet.ecore#//Arc/poid"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinet.ecore#//Arc/type"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinet.ecore#//Arc/target"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinet.ecore#//Arc/noeud"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinet.ecore#//Arc/source"/>
     </genClasses>
     <genClasses ecoreClass="petrinet.ecore#//Transition"/>
     <genClasses ecoreClass="petrinet.ecore#//Place">

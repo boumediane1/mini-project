@@ -3,6 +3,7 @@
   <viewpoint:DAnalysis uid="_QLM1UOoTEfCgM7t1lDsR0g" selectedViews="_QLw2AOoTEfCgM7t1lDsR0g" version="15.4.1.202403191723">
     <semanticResources>simplepdl.ecore</semanticResources>
     <semanticResources>simplepdl.genmodel</semanticResources>
+    <semanticResources>Process.xmi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_QLw2AOoTEfCgM7t1lDsR0g">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_QMB7wOoTEfCgM7t1lDsR0g" name="simplepdl" repPath="#_QL_fgOoTEfCgM7t1lDsR0g" changeId="1767603882393">
