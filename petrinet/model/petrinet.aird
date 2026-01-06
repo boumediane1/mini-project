@@ -3,6 +3,7 @@
   <viewpoint:DAnalysis uid="_ewUkQOoWEfCgM7t1lDsR0g" selectedViews="_ewxQMOoWEfCgM7t1lDsR0g" version="15.4.1.202403191723">
     <semanticResources>petrinet.ecore</semanticResources>
     <semanticResources>petrinet.genmodel</semanticResources>
+    <semanticResources>PetriNet.xmi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_ewxQMOoWEfCgM7t1lDsR0g">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_exBH0OoWEfCgM7t1lDsR0g" name="petrinet" repPath="#_ew-rkOoWEfCgM7t1lDsR0g" changeId="1767615458744">
