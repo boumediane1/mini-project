@@ -1,0 +1,35 @@
+Process SoftwareProject {
+    worksequence {
+        WorkSequence {
+            linkType finishToFinish
+            predecessor Conception
+            successor RedactionDoc
+        }
+        , WorkSequence {
+            linkType finishToStart
+            predecessor Conception
+            successor Programmation
+        }
+        , WorkSequence {
+            linkType startToStart
+            predecessor Conception
+            successor RedactionTests
+        }
+        , WorkSequence {
+            linkType finishToFinish
+            predecessor Programmation
+            successor RedactionTests
+        }
+    }
+
+    workdefinition {
+        WorkDefinition Conception {
+        }
+        , WorkDefinition RedactionDoc {
+        }
+        , WorkDefinition Programmation {
+        }
+        , WorkDefinition RedactionTests {
+        }
+    }
+}
